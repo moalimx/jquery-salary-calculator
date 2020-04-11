@@ -3,31 +3,31 @@ console.log('in JS');
 $(document).ready(readyNow)
 
 function readyNow() {
-    console.log('im in JQ');
+    $('#submitBtn').on('click',add)
+    
+    
+}//end of readyNow Function
+let employeeArray = [];
+// creating a object where I can pass the information given for the employees 
+let employeeInformation = [
+    {
+    firstName: firstName,
+    lastName: lastName,
+    idNumber:idNumber,
+    jobTitle: jobTitle,
+    annualSalary: annualSalary
+}
+]
+
+
+
+//append information to DOM
+function appendToDom() {
     
 }
 
-// creating a object where I can pass the information given for the employees 
+//function to calculate monthly costs
 
-let employeeInformation = [
-    {
-    firstName: 'Jen',
-    lastName: 'Barber',
-    idNumber:'4521',
-    jobTitle: 'Team Lead',
-    annualSalary: 80000
-},
-{
-    firstName: 'Maurice',
-    lastName: 'Moss',
-    idNumber:'8724',
-    jobTitle: 'Support Team',
-    annualSalary: 58000
-},
-{
-    firstName: 'Roy',
-    lastName: 'Smith',
-    idNumber:'9623',
-    jobTitle: 'Quality Assurance',
-    annualSalary: 48000
-}]//employeeInformation
+function calculateMonthlyCosts() {
+    
+}
