@@ -63,13 +63,17 @@ function deleteFromArray() {
 
 function calculateMonthly() {
     let cost = 0;
-   
+    let el = $('#totalMonthly');
     for (let i = 0; i < employeeArray.length; i++) {
         cost += Number(`${employeeArray[i].annualSalary}`) / 12;
     //    cost += Number(employeeArray[i].annualSalary) / 12;
      //how to return and actually display the
-
      //target annualSalary using .annualSalary?
+     el.empty()
+     el.append(cost);
+     if (cost > 20000) {
+         $('#totalMonthly').addClass('monthlyWarning')
+     }
 }
 
 }//end of calculateMonthly function
