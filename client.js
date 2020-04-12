@@ -5,6 +5,7 @@ function readyNow() {
     $('#submitBtn').on('click', addToArray)
     $('#submitBtn').on('click', appendToDom)
     $('tbody').on('click','#deleteBtn', deleteFromArray)
+    $('#submitBtn').on('click', calculateMonthly)
 }//end of readyNow Function
 
 let employeeArray = [];
@@ -33,7 +34,7 @@ function appendToDom() {
     for (let i = 0; i < employeeArray.length; i++) {
         el.append(
             `<tr>
-            <td> ${employeeArray[i].firstName}</td>
+            <td>${employeeArray[i].firstName}</td>
             <td>${employeeArray[i].lastName}</td>
             <td>${employeeArray[i].idNumber}</td>
             <td>${employeeArray[i].jobTitle}</td>
@@ -49,7 +50,7 @@ function appendToDom() {
 
     }
 
-}
+}//end of appendToDom function
 
 function deleteFromArray() {
     for (let i = 0; i < employeeArray.length; i++) {
@@ -58,5 +59,18 @@ function deleteFromArray() {
     }
     console.log('in Delete');
     
+}//end of deleteFromArray function
+
+function calculateMonthly() {
+    let cost = 0;
+   
+    for (let i = 0; i < employeeArray.length; i++) {
+        cost += Number(`${employeeArray[i].annualSalary}`) / 12;
+    //    cost += Number(employeeArray[i].annualSalary) / 12;
+     //how to return and actually display the
+
+     //target annualSalary using .annualSalary?
 }
+
+}//end of calculateMonthly function
 
